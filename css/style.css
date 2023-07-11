@@ -1,0 +1,180 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+body {
+  background-color: #565956;
+  color: #FFF;
+  text-transform: capitalize;
+}
+
+.wrapper {
+  padding: 30px;
+  overflow: hidden;
+  min-height: 100%;
+}
+@media (max-width: 767.98px) {
+  .wrapper {
+    padding: 10px;
+  }
+}
+
+.tabs__menu {
+  background-color: #fff;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+.tabs__button {
+  font-size: 40px;
+}
+@media (max-width: 767.98px) {
+  .tabs__button {
+    font-size: 18px;
+  }
+}
+.tabs__body {
+  padding-top: 100px;
+  position: relative;
+}
+.tabs__body:hover .tab__prev, .tabs__body:hover .tab__next {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tab {
+  display: none;
+  overflow: hidden;
+  max-width: 90%;
+  margin: 0 auto;
+}
+.tab__sliderwrapper {
+  display: flex;
+}
+.tab__slide {
+  flex: 0 0 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 17.5px;
+}
+@media (max-width: 1300px) {
+  .tab__slide {
+    flex: 0 0 33.333%;
+  }
+}
+@media (max-width: 900px) {
+  .tab__slide {
+    flex: 1 0 100%;
+  }
+}
+.tab__image {
+  max-width: 100%;
+  margin-bottom: 25px;
+}
+.tab__name {
+  text-transform: uppercase;
+  color: rgb(246, 0, 0);
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+.tab__description {
+  color: #000;
+}
+.tab__prev {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  border-right: 20px solid #ffffff;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: 0.3s;
+}
+.tab__next {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  border-left: 20px solid #ffffff;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: 0.3s;
+}
